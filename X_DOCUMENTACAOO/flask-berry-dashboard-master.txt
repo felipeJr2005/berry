@@ -1,0 +1,3 @@
+nosso modelo é desenvolvido com brodcast e js... esse é via flask
+
+aproveitar modelo basta pedir para entender a logica mas aplicar no nosso modelo sem trazer nada do modelo anterior apenas logica.

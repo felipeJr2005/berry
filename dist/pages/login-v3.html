@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <!-- [Head] start -->
   <head>
-    <title>Login | Berry Dashboard Template</title>
+    <title>Login | PDF Facil</title>
     <!-- [Meta] -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="Berry is trending dashboard template made using Bootstrap 5 design framework. Berry is available in Bootstrap, React, CodeIgniter, Angular,  and .net Technologies."
+      content="Acesse sua conta PDF Facil para gerenciar suas ferramentas PDF gratuitas de compressão, conversão, edição e muito mais."
     />
     <meta
       name="keywords"
-      content="Bootstrap admin template, Dashboard UI Kit, Dashboard Template, Backend Panel, react dashboard, angular dashboard"
+      content="PDF Facil login, ferramentas PDF, comprimir PDF, converter PDF, manipular PDF, login"
     />
-    <meta name="author" content="codedthemes" />
+    <meta name="author" content="PDF Facil" />
 
     <!-- [Favicon] icon -->
     <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
@@ -52,53 +52,59 @@
         <div class="auth-form">
           <div class="card my-5">
             <div class="card-body">
-              <a href="#" class="d-flex justify-content-center">
-                <img src="../assets/images/logo-dark.svg" alt="image" class="img-fluid brand-logo" />
+              <a href="../dashboard/index.html" class="d-flex justify-content-center">
+                <img src="../assets/images/logo-dark.svg" alt="PDF Facil" class="img-fluid brand-logo" />
               </a>
               <div class="row">
                 <div class="d-flex justify-content-center">
                   <div class="auth-header">
-                    <h2 class="text-secondary mt-5"><b>Hi, Welcome Back</b></h2>
-                    <p class="f-16 mt-2">Enter your credentials to continue</p>
+                    <h2 class="text-secondary mt-5"><b>Olá, Bem-vindo de volta</b></h2>
+                    <p class="f-16 mt-2">Digite suas credenciais para continuar</p>
                   </div>
                 </div>
               </div>
               <div class="d-grid">
                 <button type="button" class="btn mt-2 bg-light-primary bg-light text-muted">
-                  <img src="../assets/images/authentication/google-icon.svg" alt="image" />Sign In With Google
+                  <img src="../assets/images/authentication/google-icon.svg" alt="Google" />Entrar com Google
                 </button>
               </div>
               <div class="saprator mt-3">
-                <span>or</span>
+                <span>ou</span>
               </div>
-              <h5 class="my-4 d-flex justify-content-center">Sign in with Email address</h5>
+              <h5 class="my-4 d-flex justify-content-center">Entrar com endereço de email</h5>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Email address / Username" />
-                <label for="floatingInput">Email address / Username</label>
+                <input type="email" class="form-control" id="floatingInput" placeholder="Endereço de email / Usuário" />
+                <label for="floatingInput">Endereço de email / Usuário</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput1" placeholder="Password" />
-                <label for="floatingInput1">Password</label>
+                <input type="password" class="form-control" id="floatingInput1" placeholder="Senha" />
+                <label for="floatingInput1">Senha</label>
               </div>
               <div class="d-flex mt-1 justify-content-between">
                 <div class="form-check">
                   <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="" />
-                  <label class="form-check-label text-muted" for="customCheckc1">Remember me</label>
+                  <label class="form-check-label text-muted" for="customCheckc1">Lembrar de mim</label>
                 </div>
-                <h5 class="text-secondary">Forgot Password?</h5>
+                <h5 class="text-secondary">Esqueceu a senha?</h5>
               </div>
               <div class="d-grid mt-4">
-                <button type="button" class="btn btn-secondary">Sign In</button>
+                <button type="button" class="btn btn-secondary">Entrar</button>
               </div>
               <hr />
-              <h5 class="d-flex justify-content-center">Don't have an account?</h5>
+              <h5 class="d-flex justify-content-center">Não tem uma conta? <a href="register-v3.html" class="text-primary ms-2">Cadastre-se</a></h5>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- [ Main Content ] end -->
-    <!-- Required Js -->
+    
+    <!-- ==================== INÍCIO DOS SCRIPTS ==================== -->
+    
+    <!-- CryptoJS - Para sistema de hash de senhas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    
+    <!-- Required Js Berry -->
     <script src="../assets/js/plugins/popper.min.js"></script>
     <script src="../assets/js/plugins/simplebar.min.js"></script>
     <script src="../assets/js/plugins/bootstrap.min.js"></script>
@@ -107,7 +113,11 @@
     <script src="../assets/js/theme.js"></script>
     <script src="../assets/js/plugins/feather.min.js"></script>
 
+    <!-- Sistema de Autenticação -->
+    <script src="../assets/js/auth-system.js"></script>
+    <script src="../assets/js/pages/login-v3.js"></script>
        
+    <!-- Berry Theme Configuration -->
     <script>
       layout_change('light');
     </script>

@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <title>Comprimir PDF - PDF Facil</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <!-- Berry CSS (mesmo estrutura do index.html) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" id="main-font-link" />
+  <link rel="stylesheet" href="../assets/fonts/phosphor/duotone/style.css" />
+  <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../assets/fonts/feather.css" />
+  <link rel="stylesheet" href="../assets/fonts/fontawesome.css" />
+  <link rel="stylesheet" href="../assets/fonts/material.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" />
+  <link rel="stylesheet" href="../assets/css/style-preset.css" />
+</head>
+
+<body data-pc-preset="preset-1" data-pc-sidebar-theme="light" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme="light">
+  
+  <!-- 
+    IMPORTANTE: Para o sistema AJAX funcionar, mantenha a estrutura completa
+    mas apenas o conteúdo dentro de .pc-content será extraído e usado
+  -->
+  
+  <!-- Pre-loader -->
+  <div class="loader-bg">
+    <div class="loader-track">
+      <div class="loader-fill"></div>
+    </div>
+  </div>
+
+  <!-- Sidebar (será ignorada pelo AJAX) -->
+  <nav class="pc-sidebar">
+    <!-- Mesma sidebar do index.html - pode copiar/colar -->
+  </nav>
+
+  <!-- Header (será ignorado pelo AJAX) -->
+  <header class="pc-header">
+    <!-- Mesmo header do index.html - pode copiar/colar -->
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL - Apenas esta área será extraída pelo AJAX -->
+  <div class="pc-container">
+    <div class="pc-content">
+      
+      <!-- Breadcrumb -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="page-header-title">
+                <h5 class="m-b-10">Comprimir PDF</h5>
+              </div>
+            </div>
+            <div class="col-auto">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">PDF Facil</a></li>
+                <li class="breadcrumb-item" aria-current="page">Comprimir</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conteúdo da ferramenta -->
+      <div class="row">
+        
+        <!-- Área de Upload -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h5><i class="ti ti-upload me-2"></i>Upload de Arquivo</h5>
+            </div>
+            <div class="card-body">
+              <div class="upload-area border border-2 border-dashed border-primary rounded p-4 text-center">
+                <div class="upload-content">
+                  <i class="ti ti-file-upload text-primary" style="font-size: 3rem;"></i>
+                  <h6 class="mt-3 mb-2">Arraste e solte seu PDF aqui</h6>
+                  <p class="text-muted mb-3">ou clique para selecionar arquivo</p>
+                  <input type="file" id="pdf-file" accept=".pdf" class="d-none" />
+                  <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('pdf-file').click()">
+                    <i class="ti ti-folder-open me-2"></i>Selecionar PDF
+                  </button>
+                </div>
+              </div>
+              
+              <!-- Info do arquivo selecionado -->
+              <div id="file-info" class="mt-3 d-none">
+                <div class="alert alert-light-primary">
+                  <div class="d-flex align-items-center">
+                    <i class="ti ti-file-check me-2"></i>
+                    <div>
+                      <h6 class="mb-0" id="file-name">arquivo.pdf</h6>
+                      <small class="text-muted" id="file-size">1.2 MB</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Configurações de Compressão -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h5><i class="ti ti-settings me-2"></i>Configurações</h5>
+            </div>
+            <div class="card-body">
+              
+              <!-- Qualidade de compressão -->
+              <div class="mb-4">
+                <label class="form-label">Nível de Compressão</label>
+                <div class="row g-2">
+                  <div class="col-4">
+                    <input type="radio" class="btn-check" name="compression" id="high-quality" value="high" checked>
+                    <label class="btn btn-outline-success w-100" for="high-quality">
+                      <i class="ti ti-diamond"></i>
+                      <br><small>Alta Qualidade</small>
+                    </label>
+                  </div>
+                  <div class="col-4">
+                    <input type="radio" class="btn-check" name="compression" id="medium-quality" value="medium">
+                    <label class="btn btn-outline-warning w-100" for="medium-quality">
+                      <i class="ti ti-adjustments"></i>
+                      <br><small>Balanceado</small>
+                    </label>
+                  </div>
+                  <div class="col-4">
+                    <input type="radio" class="btn-check" name="compression" id="low-quality" value="low">
+                    <label class="btn btn-outline-danger w-100" for="low-quality">
+                      <i class="ti ti-file-minus"></i>
+                      <br><small>Máxima Compressão</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Opções avançadas -->
+              <div class="accordion" id="advanced-options">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advanced-collapse">
+                      <i class="ti ti-adjustments-horizontal me-2"></i>Opções Avançadas
+                    </button>
+                  </h2>
+                  <div id="advanced-collapse" class="accordion-collapse collapse" data-bs-parent="#advanced-options">
+                    <div class="accordion-body">
+                      <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="remove-metadata">
+                        <label class="form-check-label" for="remove-metadata">
+                          Remover metadados
+                        </label>
+                      </div>
+                      <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="optimize-images">
+                        <label class="form-check-label" for="optimize-images">
+                          Otimizar imagens
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="remove-annotations">
+                        <label class="form-check-label" for="remove-annotations">
+                          Remover anotações
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botão processar -->
+              <div class="d-grid mt-4">
+                <button type="button" class="btn btn-primary" id="compress-btn" disabled>
+                  <i class="ti ti-file-minus me-2"></i>Comprimir PDF
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Área de Resultado -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="card d-none" id="result-area">
+            <div class="card-header">
+              <h5><i class="ti ti-check-circle me-2"></i>Resultado da Compressão</h5>
+            </div>
+            <div class="card-body">
+              
+              <!-- Progress bar -->
+              <div id="progress-area" class="mb-4">
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Processando...</span>
+                  <span id="progress-percent">0%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                </div>
+              </div>
+
+              <!-- Comparação antes/depois -->
+              <div id="comparison-area" class="d-none">
+                <div class="row text-center">
+                  <div class="col-md-5">
+                    <div class="card border-secondary">
+                      <div class="card-body">
+                        <h6 class="card-title">Arquivo Original</h6>
+                        <h4 class="text-secondary" id="original-size">1.2 MB</h4>
+                        <small class="text-muted">Tamanho inicial</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 d-flex align-items-center justify-content-center">
+                    <i class="ti ti-arrow-right text-primary" style="font-size: 2rem;"></i>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card border-success">
+                      <div class="card-body">
+                        <h6 class="card-title">Arquivo Comprimido</h6>
+                        <h4 class="text-success" id="compressed-size">800 KB</h4>
+                        <small class="text-muted">Redução de <span id="reduction-percent" class="fw-bold text-success">33%</span></small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Botões de ação -->
+                <div class="row mt-4">
+                  <div class="col-md-8">
+                    <div class="alert alert-light-success">
+                      <i class="ti ti-check-circle me-2"></i>
+                      <strong>Compressão concluída!</strong> Seu arquivo foi otimizado com sucesso.
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="d-grid gap-2">
+                      <button type="button" class="btn btn-success" id="download-btn">
+                        <i class="ti ti-download me-2"></i>Download
+                      </button>
+                      <button type="button" class="btn btn-outline-secondary" id="new-file-btn">
+                        <i class="ti ti-plus me-2"></i>Novo Arquivo
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info adicional -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="card border-info">
+            <div class="card-body">
+              <h6 class="card-title text-info">
+                <i class="ti ti-info-circle me-2"></i>Como funciona a compressão?
+              </h6>
+              <p class="card-text mb-0">
+                Nossa ferramenta utiliza algoritmos avançados para reduzir o tamanho do seu PDF sem comprometer significativamente a qualidade. 
+                O processo é realizado localmente no seu navegador, garantindo total privacidade dos seus documentos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer (será ignorado pelo AJAX) -->
+  <footer class="pc-footer">
+    <!-- Mesmo footer do index.html -->
+  </footer>
+
+  <!-- Scripts Berry -->
+  <script src="../assets/js/plugins/popper.min.js"></script>
+  <script src="../assets/js/plugins/simplebar.min.js"></script>
+  <script src="../assets/js/plugins/bootstrap.min.js"></script>
+  <script src="../assets/js/icon/custom-font.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/plugins/feather.min.js"></script>
+
+  <!-- JavaScript específico da ferramenta -->
+  <script>
+    // JavaScript específico para a funcionalidade de compressão
+    document.addEventListener('DOMContentLoaded', function() {
+      initCompressTool();
+    });
+
+    // Também escutar o evento customizado para quando carregado via AJAX
+    document.addEventListener('berryContentLoaded', function() {
+      initCompressTool();
+    });
+
+    function initCompressTool() {
+      const fileInput = document.getElementById('pdf-file');
+      const compressBtn = document.getElementById('compress-btn');
+      const fileInfo = document.getElementById('file-info');
+      
+      if (!fileInput) return; // Evitar erro se elementos não existirem
+
+      // Setup drag and drop
+      setupDragAndDrop();
+      
+      // Setup file input
+      fileInput.addEventListener('change', handleFileSelect);
+      
+      // Setup compress button
+      if (compressBtn) {
+        compressBtn.addEventListener('click', compressPDF);
+      }
+    }
+
+    function setupDragAndDrop() {
+      const uploadArea = document.querySelector('.upload-area');
+      if (!uploadArea) return;
+
+      uploadArea.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        this.classList.add('border-success');
+      });
+
+      uploadArea.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        this.classList.remove('border-success');
+      });
+
+      uploadArea.addEventListener('drop', function(e) {
+        e.preventDefault();
+        this.classList.remove('border-success');
+        
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+          document.getElementById('pdf-file').files = files;
+          handleFileSelect({ target: { files: files } });
+        }
+      });
+    }
+
+    function handleFileSelect(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      if (file.type !== 'application/pdf') {
+        alert('Por favor, selecione apenas arquivos PDF.');
+        return;
+      }
+
+      // Mostrar info do arquivo
+      document.getElementById('file-name').textContent = file.name;
+      document.getElementById('file-size').textContent = formatFileSize(file.size);
+      document.getElementById('file-info').classList.remove('d-none');
+      
+      // Habilitar botão
+      document.getElementById('compress-btn').disabled = false;
+    }
+
+    function compressPDF() {
+      // Mostrar área de resultado
+      document.getElementById('result-area').classList.remove('d-none');
+      
+      // Simular progresso
+      simulateProgress();
+    }
+
+    function simulateProgress() {
+      const progressBar = document.querySelector('.progress-bar');
+      const progressPercent = document.getElementById('progress-percent');
+      let progress = 0;
+
+      const interval = setInterval(() => {
+        progress += Math.random() * 15;
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(interval);
+          showResult();
+        }
+        
+        progressBar.style.width = progress + '%';
+        progressPercent.textContent = Math.round(progress) + '%';
+      }, 200);
+    }
+
+    function showResult() {
+      // Esconder progress
+      document.getElementById('progress-area').classList.add('d-none');
+      
+      // Mostrar comparação
+      document.getElementById('comparison-area').classList.remove('d-none');
+      
+      // Simular dados da compressão
+      const originalSize = '1.2 MB';
+      const compressedSize = '800 KB';
+      const reduction = '33%';
+      
+      document.getElementById('original-size').textContent = originalSize;
+      document.getElementById('compressed-size').textContent = compressedSize;
+      document.getElementById('reduction-percent').textContent = reduction;
+    }
+
+    function formatFileSize(bytes) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+  </script>
+
+  <!-- Berry theme configs -->
+  <script>
+    layout_change('light');
+    font_change('Roboto');
+    change_box_container('false');
+    layout_caption_change('true');
+    layout_rtl_change('false');
+    preset_change('preset-1');
+  </script>
+
+</body>
+</html>

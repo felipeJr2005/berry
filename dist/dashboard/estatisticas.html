@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="pt-BR">
+  <!-- [Head] start -->
+  <head>
+    <title>PDF Facil | Ferramentas PDF Gratuitas</title>
+    <!-- [Meta] -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="PDF Facil - Todas as ferramentas PDF em um só lugar. Comprimir, converter, dividir, juntar e muito mais. Gratuito e sem cadastro."
+    />
+    <meta
+      name="keywords"
+      content="PDF tools, comprimir PDF, converter PDF, dividir PDF, juntar PDF, ferramentas PDF gratuitas"
+    />
+    <meta name="author" content="PDF Facil" />
+
+    <!-- [Favicon] icon -->
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
+ <!-- [Google Font] Family -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" id="main-font-link" />
+<!-- [phosphor Icons] https://phosphoricons.com/ -->
+<link rel="stylesheet" href="../assets/fonts/phosphor/duotone/style.css" />
+<!-- [Tabler Icons] https://tablericons.com -->
+<link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" />
+<!-- [Feather Icons] https://feathericons.com -->
+<link rel="stylesheet" href="../assets/fonts/feather.css" />
+<!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+<link rel="stylesheet" href="../assets/fonts/fontawesome.css" />
+<!-- [Material Icons] https://fonts.google.com/icons -->
+<link rel="stylesheet" href="../assets/fonts/material.css" />
+<!-- [Template CSS Files] -->
+<link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" />
+<link rel="stylesheet" href="../assets/css/style-preset.css" />
+
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+  <body>
+    <!-- [ Pre-loader ] start -->
+<div class="loader-bg">
+  <div class="loader-track">
+    <div class="loader-fill"></div>
+  </div>
+</div>
+<!-- [ Pre-loader ] End -->
+
+<!-- [ Sidebar Menu ] start -->
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <a href="../dashboard/index.html" class="b-brand text-primary">
+        <!-- ========   Change your logo from here   ============ -->
+        <img src="../assets/images/logo-dark.svg" alt="PDF Facil" class="logo logo-lg" />
+      </a>
+    </div>
+    <div class="navbar-content">
+      <ul class="pc-navbar">
+        <li class="pc-item pc-caption">
+          <label>Dashboard</label>
+          <i class="ti ti-dashboard"></i>
+        </li>
+        <li class="pc-item active">
+          <a href="../dashboard/index.html" class="pc-link"
+            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Início</span></a
+          >
+        </li>
+
+        <li class="pc-item pc-caption">
+          <label>Elements</label>
+          <i class="ti ti-apps"></i>
+        </li>
+        <li class="pc-item">
+          <a href="../elements/bc_typography.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-typography"></i></span>
+            <span class="pc-mtext">Typography</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="../elements/bc_color.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-color-swatch"></i></span>
+            <span class="pc-mtext">Color</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="../elements/icon-tabler.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-plant-2"></i></span>
+            <span class="pc-mtext">Icons</span>
+          </a>
+        </li>
+
+        <li class="pc-item pc-caption">
+          <label>PDF Funcoes</label>
+          <i class="ti ti-file-text"></i>
+        </li>
+        <li class="pc-item">
+          <a href="comprimir.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-file-minus"></i></span>
+            <span class="pc-mtext">Comprimir</span>
+          </a>
+        </li>
+        <li class="pc-item pc-hasmenu">
+          <a href="#!" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-exchange"></i></span>
+            <span class="pc-mtext">Converter</span>
+            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+          </a>
+          <ul class="pc-submenu">
+            <li class="pc-item"><a class="pc-link" href="pdf-para-word.html">Word (DOCX)</a></li>
+            <li class="pc-item"><a class="pc-link" href="pdf-para-texto.html">Texto (TXT)</a></li>
+            <li class="pc-item"><a class="pc-link" href="pdf-para-imagem.html">Imagem</a></li>
+            <li class="pc-item"><a class="pc-link" href="pdf-para-ocr.html">OCR Tesseract</a></li>
+            <li class="pc-item"><a class="pc-link" href="pdf-para-excel.html">Excel (XLSX)</a></li>
+          </ul>
+        </li>
+        <li class="pc-item">
+          <a href="dividir.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-scissors"></i></span>
+            <span class="pc-mtext">Dividir</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="editar.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-pencil"></i></span>
+            <span class="pc-mtext">Editar</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="extrair-paginas.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-file-export"></i></span>
+            <span class="pc-mtext">Extrair Páginas</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="extrair-imagens.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-photo"></i></span>
+            <span class="pc-mtext">Extrair Imagens</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="filtro.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-adjustments"></i></span>
+            <span class="pc-mtext">Filtro</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="juntar.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-files"></i></span>
+            <span class="pc-mtext">Juntar</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="otimizar-pje.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-scale"></i></span>
+            <span class="pc-mtext">Otimizar PJE</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="remover-paginas.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-trash"></i></span>
+            <span class="pc-mtext">Remover Páginas</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="reorganizar.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-sort-ascending"></i></span>
+            <span class="pc-mtext">Reorganizar</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="rotacionar.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-rotate"></i></span>
+            <span class="pc-mtext">Rotacionar</span>
+          </a>
+        </li>
+
+
+ <li class="pc-item">
+          <a href="../pages/404.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-alert-triangle"></i></span>
+            <span class="pc-mtext">Erro 404</span>
+          </a>
+        </li>
+
+        
+        <li class="pc-item pc-caption">
+          <label>Pages</label>
+          <i class="ti ti-news"></i>
+        </li>
+        <li class="pc-item">
+          <a class="pc-link" target="_blank" href="../pages/login-v3.html">
+            <span class="pc-micon"><i class="ti ti-lock"></i></span>
+            <span class="pc-mtext">Login</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="../pages/register-v3.html" target="_blank" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-user-plus"></i></span>
+            <span class="pc-mtext">Register</span>
+          </a>
+        </li>
+
+        <li class="pc-item pc-caption">
+          <label>Other</label>
+          <i class="ti ti-brand-chrome"></i>
+        </li>
+        <li class="pc-item pc-hasmenu">
+          <a href="#!" class="pc-link"
+            ><span class="pc-micon"><i class="ti ti-menu"></i></span><span class="pc-mtext">Menu levels</span
+            ><span class="pc-arrow"><i data-feather="chevron-right"></i></span
+          ></a>
+          <ul class="pc-submenu">
+            <li class="pc-item"><a class="pc-link" href="#!">Level 2.1</a></li>
+            <li class="pc-item pc-hasmenu">
+              <a href="#!" class="pc-link"
+                >Level 2.2<span class="pc-arrow"><i data-feather="chevron-right"></i></span
+              ></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
+                <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
+                <li class="pc-item pc-hasmenu">
+                  <a href="#!" class="pc-link"
+                    >Level 3.3<span class="pc-arrow"><i data-feather="chevron-right"></i></span
+                  ></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
+                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="#!" class="pc-link"
+                >Level 2.3<span class="pc-arrow"><i data-feather="chevron-right"></i></span
+              ></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
+                <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
+                <li class="pc-item pc-hasmenu">
+                  <a href="#!" class="pc-link"
+                    >Level 3.3<span class="pc-arrow"><i data-feather="chevron-right"></i></span
+                  ></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
+                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="pc-item">
+          <a href="sobre.html" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-info-circle"></i></span>
+            <span class="pc-mtext">Sobre</span>
+          </a>
+        </li>
+
+        
+      </ul>
+      
+      <div class="pc-navbar-card bg-primary rounded">
+        <h4 class="text-white">Ferramentas PDF Gratuitas</h4>
+        <p class="text-white opacity-75">Manipule seus PDFs sem custos e sem cadastro</p>
+      </div>
+      
+      <div class="w-100 text-center">
+        <div class="badge theme-version badge rounded-pill bg-light text-dark f-12"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- [ Sidebar Menu ] end -->
+
+
+
+ <!-- [ Header Topbar ] start -->
+<header class="pc-header">
+  <div class="header-wrapper"><!-- [Mobile Media Block] start -->
+<div class="me-auto pc-mob-drp">
+  <ul class="list-unstyled">
+    <li class="pc-h-item header-mobile-collapse">
+      <a href="#" class="pc-head-link head-link-secondary ms-0" id="sidebar-hide">
+        <i class="ti ti-menu-2"></i>
+      </a>
+    </li>
+    <li class="pc-h-item pc-sidebar-popup">
+      <a href="#" class="pc-head-link head-link-secondary ms-0" id="mobile-collapse">
+        <i class="ti ti-menu-2"></i>
+      </a>
+    </li>
+    <li class="dropdown pc-h-item d-inline-flex d-md-none">
+      <a
+        class="pc-head-link head-link-secondary dropdown-toggle arrow-none m-0"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="false"
+        aria-expanded="false"
+      >
+        <i class="ti ti-search"></i>
+      </a>
+      <div class="dropdown-menu pc-h-dropdown drp-search">
+        <form class="px-3">
+          <div class="mb-0 d-flex align-items-center">
+            <i data-feather="search"></i>
+            <input type="search" class="form-control border-0 shadow-none" placeholder="Buscar ferramenta..." />
+          </div>
+        </form>
+      </div>
+    </li>
+    <li class="pc-h-item d-none d-md-inline-flex">
+      <form class="header-search">
+        <i data-feather="search" class="icon-search"></i>
+        <input type="search" class="form-control" placeholder="Buscar ferramenta..." />
+        <button class="btn btn-light-secondary btn-search"><i class="ti ti-adjustments-horizontal"></i></button>
+      </form>
+    </li>
+  </ul>
+</div>
+<!-- [Mobile Media Block end] -->
+<div class="ms-auto">
+  <ul class="list-unstyled">
+    <li class="dropdown pc-h-item">
+      <a
+        class="pc-head-link head-link-secondary dropdown-toggle arrow-none me-0"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="false"
+        aria-expanded="false"
+      >
+        <i class="ti ti-bell"></i>
+      </a>
+      <div class="dropdown-menu dropdown-notification dropdown-menu-end pc-h-dropdown">
+        <div class="dropdown-header">
+          <a href="#!" class="link-primary float-end text-decoration-underline">Marcar como lidas</a>
+          <h5>
+            Todas as Notificações
+            <span class="badge bg-warning rounded-pill ms-1">01</span>
+          </h5>
+        </div>
+        <div class="dropdown-header px-0 text-wrap header-notification-scroll position-relative" style="max-height: calc(100vh - 215px)">
+          <div class="list-group list-group-flush w-100">
+            <div class="list-group-item list-group-item-action">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <div class="user-avtar bg-light-success"><i class="ti ti-file-check"></i></div>
+                </div>
+                <div class="flex-grow-1 ms-1">
+                  <span class="float-end text-muted">3 min atrás</span>
+                  <h5>PDF Processado</h5>
+                  <p class="text-body fs-6">Seu arquivo foi comprimido com sucesso.</p>
+                  <div class="badge rounded-pill bg-light-danger">Não lida</div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item list-group-item-action">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="user-avtar" />
+                </div>
+                <div class="flex-grow-1 ms-1">
+                  <span class="float-end text-muted">10 min atrás</span>
+                  <h5>Nova Funcionalidade</h5>
+                  <p class="text-body fs-6">Agora você pode extrair imagens dos seus PDFs!</p>
+                  <div class="badge rounded-pill bg-light-success">Novidade</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="text-center py-2">
+          <a href="#!" class="link-primary">Ver todas</a>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown pc-h-item header-user-profile">
+      <a
+        class="pc-head-link head-link-primary dropdown-toggle arrow-none me-0"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="false"
+        aria-expanded="false"
+      >
+        <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar" />
+        <span>
+          <i class="ti ti-settings"></i>
+        </span>
+      </a>
+      <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
+        <div class="dropdown-header">
+          <h4>
+            Bom dia,
+            <span class="small text-muted">Usuário</span>
+          </h4>
+          <p class="text-muted">PDF Facil User</p>
+          <hr />
+          <div class="profile-notification-scroll position-relative" style="max-height: calc(100vh - 280px)">
+            <div class="upgradeplan-block bg-light-info rounded">
+              <h4>PDF Facil</h4>
+              <p class="text-muted">Ferramentas PDF gratuitas</p>
+              <a href="sobre.html" class="btn btn-info">Saiba Mais</a>
+            </div>
+            <hr />
+            <a href="#" class="dropdown-item">
+              <i class="ti ti-settings"></i>
+              <span>Configurações da Conta</span>
+            </a>
+            <a href="#" class="dropdown-item">
+              <i class="ti ti-user"></i>
+              <span>Perfil Social</span>
+            </a>
+            <a href="#" class="dropdown-item">
+              <i class="ti ti-logout"></i>
+              <span>Sair</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+</header>
+<!-- [ Header ] end -->
+
+
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- [ Statistics Cards ] start -->
+          <div class="col-xl-4 col-md-6">
+            <div class="card bg-secondary-dark dashnum-card text-white overflow-hidden">
+              <span class="round small"></span>
+              <span class="round big"></span>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="avtar avtar-lg">
+                      <i class="text-white ti ti-file-text"></i>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="btn-group">
+                      <a
+                        href="#"
+                        class="avtar avtar-s bg-secondary text-white dropdown-toggle arrow-none"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="ti ti-dots"></i>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item">Ver Detalhes</button></li>
+                        <li><button class="dropdown-item">Histórico</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <span class="text-white d-block f-34 f-w-500 my-2">
+                  1.347
+                  <i class="ti ti-arrow-up-right-circle opacity-50"></i>
+                </span>
+                <p class="mb-0 opacity-50">PDFs Processados Hoje</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="card bg-primary-dark dashnum-card text-white overflow-hidden">
+              <span class="round small"></span>
+              <span class="round big"></span>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="avtar avtar-lg">
+                      <i class="text-white ti ti-tools"></i>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <ul class="nav nav-pills justify-content-end mb-0" id="chart-tab-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link text-white active"
+                          id="chart-tab-home-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#chart-tab-home"
+                          role="tab"
+                          aria-controls="chart-tab-home"
+                          aria-selected="true"
+                        >
+                          Hoje
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link text-white"
+                          id="chart-tab-profile-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#chart-tab-profile"
+                          role="tab"
+                          aria-controls="chart-tab-profile"
+                          aria-selected="false"
+                        >
+                          Semana
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-content" id="chart-tab-tabContent">
+                  <div class="tab-pane show active" id="chart-tab-home" role="tabpanel" aria-labelledby="chart-tab-home-tab" tabindex="0">
+                    <div class="row">
+                      <div class="col-6">
+                        <span class="text-white d-block f-34 f-w-500 my-2">
+                          247
+                          <i class="ti ti-arrow-up-right-circle opacity-50"></i>
+                        </span>
+                        <p class="mb-0 opacity-50">Ferramentas Usadas</p>
+                      </div>
+                      <div class="col-6">
+                        <!-- ÁREA PARA MINI-CHART -->
+                        <div id="tab-chart-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="chart-tab-profile" role="tabpanel" aria-labelledby="chart-tab-profile-tab" tabindex="0">
+                    <div class="row">
+                      <div class="col-6">
+                        <span class="text-white d-block f-34 f-w-500 my-2">
+                          1.891
+                          <i class="ti ti-arrow-up-right-circle opacity-50"></i>
+                        </span>
+                        <p class="mb-0 opacity-50">Esta Semana</p>
+                      </div>
+                      <div class="col-6">
+                        <!-- ÁREA PARA MINI-CHART -->
+                        <div id="tab-chart-2"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-12">
+            <div class="card bg-success-dark dashnum-card dashnum-card-small text-white overflow-hidden">
+              <span class="round bg-success small"></span>
+              <span class="round bg-success big"></span>
+              <div class="card-body p-3">
+                <div class="d-flex align-items-center">
+                  <div class="avtar avtar-lg">
+                    <i class="text-white ti ti-download"></i>
+                  </div>
+                  <div class="ms-2">
+                    <h4 class="text-white mb-1">12.5k</h4>
+                    <p class="mb-0 opacity-75 text-sm">Downloads Hoje</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card dashnum-card dashnum-card-small overflow-hidden">
+              <span class="round bg-warning small"></span>
+              <span class="round bg-warning big"></span>
+              <div class="card-body p-3">
+                <div class="d-flex align-items-center">
+                  <div class="avtar avtar-lg bg-light-warning">
+                    <i class="text-warning ti ti-users"></i>
+                  </div>
+                  <div class="ms-2">
+                    <h4 class="mb-1">892</h4>
+                    <p class="mb-0 opacity-75 text-sm">Usuários Ativos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-8 col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row mb-3 align-items-center">
+                  <div class="col">
+                    <small class="text-muted">Ferramentas Mais Usadas</small>
+                    <h3>Top 5 Ferramentas</h3>
+                  </div>
+                  <div class="col-auto">
+                    <select class="form-select p-r-35">
+                      <option>Hoje</option>
+                      <option selected>Esta Semana</option>
+                      <option>Este Mês</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- GRÁFICO PRINCIPAL - Top 5 Ferramentas -->
+                <div id="growthchart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row mb-3 align-items-center">
+                  <div class="col">
+                    <h4>Ferramentas Populares</h4>
+                  </div>
+                  <div class="col-auto"></div>
+                </div>
+                <div class="rounded bg-light-secondary overflow-hidden mb-3">
+                  <div class="px-3 pt-3">
+                    <div class="row mb-1 align-items-start">
+                      <div class="col">
+                        <h5 class="text-secondary mb-0">Comprimir PDF</h5>
+                        <small class="text-muted">Mais Usada</small>
+                      </div>
+                      <div class="col-auto">
+                        <h4 class="mb-0">45%</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- MINI-CHART COMPRIMIR PDF -->
+                  <div id="bajajchart"></div>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item px-0">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <h5 class="mb-0">Converter PDF</h5>
+                        <small class="text-success">32% dos usos</small>
+                      </div>
+                      <div class="col-auto">
+                        <h4 class="mb-0">
+                          32%
+                          <span class="ms-2 align-top avtar avtar-xxs bg-light-success"><i class="ti ti-chevron-up text-success"></i></span>
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item px-0">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <h5 class="mb-0">Juntar PDF</h5>
+                        <small class="text-success">28% dos usos</small>
+                      </div>
+                      <div class="col-auto">
+                        <h4 class="mb-0">
+                          28%
+                          <span class="ms-2 align-top avtar avtar-xxs bg-light-success"><i class="ti ti-chevron-up text-success"></i></span>
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item px-0">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <h5 class="mb-0">Dividir PDF</h5>
+                        <small class="text-warning">18% dos usos</small>
+                      </div>
+                      <div class="col-auto">
+                        <h4 class="mb-0">
+                          18%
+                          <span class="ms-2 align-top avtar avtar-xxs bg-light-warning"><i class="ti ti-chevron-up text-warning"></i></span>
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item px-0">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <h5 class="mb-0">Extrair Páginas</h5>
+                        <small class="text-info">12% dos usos</small>
+                      </div>
+                      <div class="col-auto">
+                        <h4 class="mb-0">
+                          12%
+                          <span class="ms-2 align-top avtar avtar-xxs bg-light-info"><i class="ti ti-chevron-up text-info"></i></span>
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item px-0">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <h5 class="mb-0">Rotacionar PDF</h5>
+                        <small class="text-secondary">8% dos usos</small>
+                      </div>
+                      <div class="col-auto">
+                        <h4 class="mb-0">
+                          8%
+                          <span class="ms-2 align-top avtar avtar-xxs bg-light-secondary"><i class="ti ti-chevron-up text-secondary"></i></span>
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="text-center">
+                  <a href="#!" class="b-b-primary text-primary">
+                    Ver todas as ferramentas
+                    <i class="ti ti-chevron-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ Statistics Cards ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    <footer class="pc-footer">
+      <div class="footer-wrapper container-fluid">
+        <div class="row">
+          <div class="col-sm-6 my-1">
+            <p class="m-0">
+              PDFfacil.com - Todas as ferramentas PDF em um só lugar
+            </p>
+          </div>
+          <div class="col-sm-6 ms-auto my-1">
+            <ul class="list-inline footer-link mb-0 justify-content-sm-end d-flex">
+              <li class="list-inline-item"><a href="../dashboard/index.html">Início</a></li>
+                            <li class="list-inline-item"><a href="sobre.html">Sobre</a></li>
+              <li class="list-inline-item"><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+ <!-- Required Js -->
+<script src="../assets/js/plugins/popper.min.js"></script>
+<script src="../assets/js/plugins/simplebar.min.js"></script>
+<script src="../assets/js/plugins/bootstrap.min.js"></script>
+<script src="../assets/js/icon/custom-font.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/plugins/feather.min.js"></script>
+
+   
+<script>
+  layout_change('light');
+</script>
+   
+<script>
+  font_change('Roboto');
+</script>
+ 
+<script>
+  change_box_container('false');
+</script>
+ 
+<script>
+  layout_caption_change('true');
+</script>
+   
+<script>
+  layout_rtl_change('false');
+</script>
+ 
+<script>
+  preset_change('preset-1');
+</script>
+
+    <!-- [Page Specific JS] start -->
+    <!-- Apex Chart -->
+    <script src="../assets/js/plugins/apexcharts.min.js"></script>
+    <script src="../assets/js/pages/dashboard-default.js"></script>
+    <!-- [Page Specific JS] end -->
+  </body>
+  <!-- [Body] end -->
+</html>

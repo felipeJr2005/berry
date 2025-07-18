@@ -1,0 +1,505 @@
+/* ================================================== */
+/* ANIMAÇÕES CUSTOMIZADAS PARA ÍCONES PDF FACIL      */
+/* PADRÃO BERRY: 24x24, currentColor, delay 100ms    */
+/* TODAS AS 13 FERRAMENTAS IMPLEMENTADAS             */
+/* ================================================== */
+
+/* ================================================== */
+/* REGRA DE OURO - TIMING PATTERN                    */
+/* ================================================== */
+/* 
+ANIMAÇÃO PRIMÁRIA (Card):
+- Propriedades: transform, box-shadow  
+- Duração: 300ms
+- Atraso: 0ms (imediato)
+
+ANIMAÇÃO SECUNDÁRIA (Ícone SVG):
+- Propriedades: transform, opacity, etc.
+- Duração: varia conforme complexidade  
+- Atraso: 100ms (REGRA DE OURO)
+*/
+
+/* ================================================== */
+/* 1. COMPRIMIR PDF - Livro que comprime             */
+/* ================================================== */
+.compress-book {
+  transform-origin: center center;
+}
+
+.tool-card:hover .compress-book {
+  animation: bookCompressBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes bookCompressBerry {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.5); }
+  100% { transform: scale(0.5); }
+}
+
+/* ================================================== */
+/* 2. CONVERTER PDF - Word → Excel                   */
+/* ================================================== */
+.convert-word {
+  transform-origin: center center;
+}
+
+.convert-excel {
+  transform-origin: center center;
+}
+
+.tool-card:hover .convert-word {
+  animation: wordToExcelBerry1 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .convert-excel {
+  animation: wordToExcelBerry2 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes wordToExcelBerry1 {
+  0% { opacity: 1; transform: scale(1); }
+  25% { opacity: 1; transform: scale(1); }
+  75% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes wordToExcelBerry2 {
+  0% { opacity: 0; transform: scale(0.8); }
+  25% { opacity: 0; transform: scale(0.8); }
+  75% { opacity: 1; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ================================================== */
+/* 3. JUNTAR PDF - 2 livros → 1 livro                */
+/* ================================================== */
+.merge-book1, .merge-book2, .merge-final {
+  transform-origin: center center;
+}
+
+.tool-card:hover .merge-book1 {
+  animation: mergeBookToCenterBerry1 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .merge-book2 {
+  animation: mergeBookToCenterBerry2 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .merge-final {
+  animation: mergeFinalAppearBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes mergeBookToCenterBerry1 {
+  0% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(5px); opacity: 0; }
+}
+
+@keyframes mergeBookToCenterBerry2 {
+  0% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(-5px); opacity: 0; }
+}
+
+@keyframes mergeFinalAppearBerry {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ================================================== */
+/* 4. DIVIDIR PDF - 1 livro → 2 livros               */
+/* ================================================== */
+.split-part1, .split-part2, .split-original {
+  transform-origin: center center;
+}
+
+.tool-card:hover .split-part1 {
+  animation: splitBookLeftBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .split-part2 {
+  animation: splitBookRightBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .split-original {
+  animation: splitBookFadeBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes splitBookLeftBerry {
+  0% { transform: translateX(5px); opacity: 0; }
+  100% { transform: translateX(0px); opacity: 1; }
+}
+
+@keyframes splitBookRightBerry {
+  0% { transform: translateX(-5px); opacity: 0; }
+  100% { transform: translateX(0px); opacity: 1; }
+}
+
+@keyframes splitBookFadeBerry {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ================================================== */
+/* 5. EDITAR PDF - Linhas se alinhando               */
+/* ================================================== */
+.edit-mini1, .edit-mini2, .edit-mini3, .edit-mini4, .edit-mini5,
+.edit-mini6, .edit-mini7, .edit-mini8, .edit-mini9, .edit-mini10 {
+  transform-origin: left center;
+}
+
+.tool-card:hover .edit-mini1 {
+  animation: editAlignBerry1 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .edit-mini2 {
+  animation: editAlignBerry2 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .edit-mini3 {
+  animation: editAlignBerry3 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .edit-mini4 {
+  animation: editAlignBerry4 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .edit-mini5 {
+  animation: editAlignBerry5 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .edit-mini6 {
+  animation: editAlignBerry6 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .edit-mini7 {
+  animation: editAlignBerry7 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .edit-mini8 {
+  animation: editAlignBerry8 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .edit-mini9 {
+  animation: editAlignBerry9 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .edit-mini10 {
+  animation: editAlignBerry10 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes editAlignBerry1 {
+  0% { transform: translateX(0); opacity: 0.7; }
+  100% { transform: translateX(1px); opacity: 1; }
+}
+
+@keyframes editAlignBerry2 {
+  0% { transform: translateX(0); opacity: 0.7; }
+  100% { transform: translateX(-10px); opacity: 1; }
+}
+
+@keyframes editAlignBerry3 {
+  0% { transform: translateX(0); opacity: 0.7; }
+  100% { transform: translateX(1px); opacity: 1; }
+}
+
+@keyframes editAlignBerry4 {
+  0% { transform: translateX(0); opacity: 0.7; }
+  100% { transform: translateX(-12px); opacity: 1; }
+}
+
+@keyframes editAlignBerry5 {
+  0% { transform: translateX(0); opacity: 0.7; }
+  100% { transform: translateX(1px); opacity: 1; }
+}
+
+@keyframes editAlignBerry6 {
+  0% { transform: translateX(0); opacity: 0.7; }
+  100% { transform: translateX(-5px); opacity: 1; }
+}
+
+@keyframes editAlignBerry7 {
+  0% { transform: translateX(0); opacity: 0.7; }
+  100% { transform: translateX(1px); opacity: 1; }
+}
+
+@keyframes editAlignBerry8 {
+  0% { transform: translateX(0); opacity: 0.7; }
+  100% { transform: translateX(-10px); opacity: 1; }
+}
+
+@keyframes editAlignBerry9 {
+  0% { transform: translateX(0); opacity: 0.7; }
+  100% { transform: translateX(1px); opacity: 1; }
+}
+
+@keyframes editAlignBerry10 {
+  0% { transform: translateX(0); opacity: 0.7; }
+  100% { transform: translateX(1px); opacity: 1; }
+}
+
+/* ================================================== */
+/* 6. EXTRAIR PÁGINAS - Páginas voando               */
+/* ================================================== */
+.extract-page1, .extract-page2, .extract-page3 {
+  transform-origin: center center;
+}
+
+.tool-card:hover .extract-page1 {
+  animation: extractRemoveBerry1 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .extract-page2 {
+  animation: extractRemoveBerry2 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .extract-page3 {
+  animation: extractRemoveBerry3 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes extractRemoveBerry1 {
+  0% { transform: translateX(0) scale(1); opacity: 1; }
+  100% { transform: translateX(-17px) scale(0.2); opacity: 0; }
+}
+
+@keyframes extractRemoveBerry2 {
+  0% { transform: translateX(0) scale(1); opacity: 1; }
+  100% { transform: translateX(17px) scale(0.2); opacity: 0; }
+}
+
+@keyframes extractRemoveBerry3 {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-17px) scale(0.2); opacity: 0; }
+}
+
+/* ================================================== */
+/* 7. EXTRAIR IMAGENS - Mesmo padrão das páginas     */
+/* ================================================== */
+.extract-image1, .extract-image2, .extract-image3 {
+  transform-origin: center center;
+}
+
+.tool-card:hover .extract-image1 {
+  animation: extractImageBerry1 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .extract-image2 {
+  animation: extractImageBerry2 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .extract-image3 {
+  animation: extractImageBerry3 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes extractImageBerry1 {
+  0% { transform: translateX(0) scale(1); opacity: 1; }
+  100% { transform: translateX(-17px) scale(0.2); opacity: 0; }
+}
+
+@keyframes extractImageBerry2 {
+  0% { transform: translateX(0) scale(1); opacity: 1; }
+  100% { transform: translateX(17px) scale(0.2); opacity: 0; }
+}
+
+@keyframes extractImageBerry3 {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-17px) scale(0.2); opacity: 0; }
+}
+
+/* ================================================== */
+/* 8. FILTROS PDF - Sliders se movendo               */
+/* ================================================== */
+.filter-bar1, .filter-bar2, .filter-bar3 {
+  transform-origin: center center;
+}
+
+.tool-card:hover .filter-bar1 {
+  animation: brightnessSliderBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .filter-bar2 {
+  animation: contrastSliderBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .filter-bar3 {
+  animation: saturationSliderBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes brightnessSliderBerry {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(4px); }
+}
+
+@keyframes contrastSliderBerry {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-3px); }
+}
+
+@keyframes saturationSliderBerry {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(5px); }
+}
+
+/* ================================================== */
+/* 9. OTIMIZAR PJE - Texto desfocado fica nítido     */
+/* ================================================== */
+.optimize-text {
+  transform-origin: center center;
+}
+
+.tool-card:hover .optimize-text {
+  animation: textBlurBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes textBlurBerry {
+  0% { filter: blur(1px); opacity: 0.7; }
+  100% { filter: blur(0px); opacity: 1; }
+}
+
+/* ================================================== */
+/* 10. REMOVER PÁGINAS - Página voando para direita  */
+/* ================================================== */
+.removable-page {
+  transform-origin: center center;
+}
+
+.tool-card:hover .removable-page {
+  animation: pageRemoveBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes pageRemoveBerry {
+  0% { transform: translateX(0) scale(1); opacity: 1; }
+  100% { transform: translateX(17px) scale(0.2); opacity: 0; }
+}
+
+/* ================================================== */
+/* 11. REORGANIZAR - Páginas trocando de posição     */
+/* ================================================== */
+.reorg-green, .reorg-red {
+  transform-origin: center center;
+}
+
+.tool-card:hover .reorg-green {
+  animation: reorgGreenToBackBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+.tool-card:hover .reorg-red {
+  animation: reorgRedToFrontBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes reorgGreenToBackBerry {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-7px) translateY(-7px); opacity: 0.7; }
+  100% { transform: translateX(-7px) translateY(-7px); }
+}
+
+@keyframes reorgRedToFrontBerry {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(7px) translateY(7px); opacity: 0.7; }
+  100% { transform: translateX(7px) translateY(7px); }
+}
+
+/* ================================================== */
+/* 12. ROTACIONAR - Página girando com pausa         */
+/* ================================================== */
+.rotate-page {
+  transform-origin: center center;
+}
+
+.tool-card:hover .rotate-page {
+  animation: pageRotateBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes pageRotateBerry {
+  0% { transform: rotate(0deg); }
+  40% { transform: rotate(90deg); }
+  50% { transform: rotate(90deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ================================================== */
+/* 13. OCR - Texto aparecendo com reconhecimento     */
+/* ================================================== */
+.ocr-text {
+  transform-origin: center center;
+}
+
+.tool-card:hover .ocr-text {
+  animation: textRecognizeBerry 1s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes textRecognizeBerry {
+  0% { opacity: 0; transform: scale(0.8) translateY(-5px); filter: blur(1px); }
+  25% { opacity: 1; transform: scale(1) translateY(0px); filter: blur(0px); }
+  100% { opacity: 1; transform: scale(0.9) translateY(15px); filter: blur(0px); }
+}
+
+/* ================================================== */
+/* ANIMAÇÃO LIXEIRA (ORIGINAL - PARA COMPATIBILIDADE) */
+/* ================================================== */
+#tampa-lixeira {
+  transition: transform 0.1s ease-in-out;
+  transform-origin: 9px 4px;
+}
+
+#corpo-lixeira {
+  transition: opacity 0.9s ease-in-out 0.1s;
+}
+
+.card-hover:hover #tampa-lixeira {
+  transform: rotate(-45deg);
+}
+
+.card-hover:hover #corpo-lixeira {
+  opacity: 0;
+}
+
+/* ================================================== */
+/* STATUS: TODAS AS 13 ANIMAÇÕES IMPLEMENTADAS       */
+/* ================================================== */
+/* 
+✅ Comprimir PDF - Livro comprime
+✅ Converter PDF - Word → Excel
+✅ Juntar PDF - 2 livros → 1
+✅ Dividir PDF - 1 livro → 2  
+✅ Editar PDF - Linhas se alinhando
+✅ Extrair Páginas - Páginas voando
+✅ Extrair Imagens - Imagens voando
+✅ Filtros PDF - Sliders se movendo
+✅ Otimizar PJE - Texto desfoca → nítido
+✅ Remover Páginas - Página voa para direita
+✅ Reorganizar - Páginas trocam posição
+✅ Rotacionar - Página gira com pausa
+✅ OCR - Texto aparece sendo reconhecido
+*/

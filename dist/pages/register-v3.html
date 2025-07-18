@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <!-- [Head] start -->
   <head>
-    <title>SignUp | Berry Dashboard Template</title>
+    <title>Cadastro | PDF Facil</title>
     <!-- [Meta] -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="Berry is trending dashboard template made using Bootstrap 5 design framework. Berry is available in Bootstrap, React, CodeIgniter, Angular,  and .net Technologies."
+      content="Crie sua conta gratuita no PDF Facil e tenha acesso a todas as ferramentas PDF: comprimir, converter, dividir, juntar e muito mais."
     />
     <meta
       name="keywords"
-      content="Bootstrap admin template, Dashboard UI Kit, Dashboard Template, Backend Panel, react dashboard, angular dashboard"
+      content="PDF Facil cadastro, registro PDF, ferramentas PDF gratuitas, criar conta PDF, signup"
     />
-    <meta name="author" content="codedthemes" />
+    <meta name="author" content="PDF Facil" />
 
     <!-- [Favicon] icon -->
     <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
@@ -52,64 +52,70 @@
         <div class="auth-form">
           <div class="card mt-5">
             <div class="card-body">
-              <a href="#" class="d-flex justify-content-center mt-3">
-                <img src="../assets/images/logo-dark.svg" alt="image" class="img-fluid brand-logo" />
+              <a href="../dashboard/index.html" class="d-flex justify-content-center mt-3">
+                <img src="../assets/images/logo-dark.svg" alt="PDF Facil" class="img-fluid brand-logo" />
               </a>
               <div class="row">
                 <div class="d-flex justify-content-center">
                   <div class="auth-header">
-                    <h2 class="text-secondary mt-5"><b>Sign up</b></h2>
-                    <p class="f-16 mt-2">Enter your credentials to continue</p>
+                    <h2 class="text-secondary mt-5"><b>Criar conta</b></h2>
+                    <p class="f-16 mt-2">Digite suas informações para continuar</p>
                   </div>
                 </div>
               </div>
               <button type="button" class="btn mt-2 bg-light-primary bg-light text-muted" style="width: 100%">
-                <img src="../assets/images/authentication/google-icon.svg" alt="image" />Sign Up With Google
+                <img src="../assets/images/authentication/google-icon.svg" alt="Google" />Cadastrar com Google
               </button>
               <div class="saprator mt-3">
-                <span>or</span>
+                <span>ou</span>
               </div>
-              <h5 class="my-4 d-flex justify-content-center">Sign Up with Email address</h5>
+              <h5 class="my-4 d-flex justify-content-center">Cadastrar com endereço de email</h5>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="First Name" />
-                    <label for="floatingInput">First Name</label>
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Nome" />
+                    <label for="floatingInput">Nome</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput1" placeholder="Last Name" />
-                    <label for="floatingInput1">Last Name</label>
+                    <input type="text" class="form-control" id="floatingInput1" placeholder="Sobrenome" />
+                    <label for="floatingInput1">Sobrenome</label>
                   </div>
                 </div>
               </div>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput2" placeholder="Email Address / Username" />
-                <label for="floatingInput2">Email Address / Username</label>
+                <input type="email" class="form-control" id="floatingInput2" placeholder="Endereço de Email / Usuário" />
+                <label for="floatingInput2">Endereço de Email / Usuário</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput3" placeholder="Password" />
-                <label for="floatingInput3">Password</label>
+                <input type="password" class="form-control" id="floatingInput3" placeholder="Senha" />
+                <label for="floatingInput3">Senha</label>
               </div>
               <div class="form-check mt-3s">
                 <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="" />
                 <label class="form-check-label" for="customCheckc1">
-                  <span class="h5 mb-0">Agree with <span>Terms & Condition.</span></span>
+                  <span class="h5 mb-0">Concordo com os <a href="../dashboard/privacidade.html" class="text-primary">Termos e Condições</a></span>
                 </label>
               </div>
               <div class="d-grid mt-4">
-                <button type="button" class="btn btn-secondary p-2">Sign Up</button>
+                <button type="button" class="btn btn-secondary p-2">Cadastrar</button>
               </div>
               <hr />
-              <h5 class="d-flex justify-content-center">Already have an account?</h5>
+              <h5 class="d-flex justify-content-center">Já tem uma conta? <a href="login-v3.html" class="text-primary ms-2">Entrar</a></h5>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- [ Main Content ] end -->
-    <!-- Required Js -->
+    
+    <!-- ==================== INÍCIO DOS SCRIPTS ==================== -->
+    
+    <!-- CryptoJS - Para sistema de hash de senhas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    
+    <!-- Required Js Berry -->
     <script src="../assets/js/plugins/popper.min.js"></script>
     <script src="../assets/js/plugins/simplebar.min.js"></script>
     <script src="../assets/js/plugins/bootstrap.min.js"></script>
@@ -118,7 +124,11 @@
     <script src="../assets/js/theme.js"></script>
     <script src="../assets/js/plugins/feather.min.js"></script>
 
+    <!-- Sistema de Autenticação -->
+    <script src="../assets/js/auth-system.js"></script>
+    <script src="../assets/js/pages/register-v3.js"></script>
        
+    <!-- Berry Theme Configuration -->
     <script>
       layout_change('light');
     </script>

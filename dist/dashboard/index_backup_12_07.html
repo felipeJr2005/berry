@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <title>PDFFácil É Rápido... 0 Stress! - Todas as ferramentas PDF em um só lugar</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="PDFFácil É Rápido... 0 Stress! Todas as ferramentas PDF em um só lugar. Edite, otimize e converta grátis." />
+  
+  <!-- Berry CSS (mesmo do sobre.html) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" id="main-font-link" />
+  <link rel="stylesheet" href="../assets/fonts/phosphor/duotone/style.css" />
+  <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../assets/fonts/feather.css" />
+  <link rel="stylesheet" href="../assets/fonts/fontawesome.css" />
+  <link rel="stylesheet" href="../assets/fonts/material.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" />
+  <link rel="stylesheet" href="../assets/css/style-preset.css" />
+  <link rel="stylesheet" href="../assets/css/animate.min.css" />
+  <style>
+    .card-hover {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-decoration: none;
+    }
+    .card-hover:hover .card-body {
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body data-pc-preset="preset-1" data-pc-sidebar-theme="light" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme="light">
+  
+  <!-- Pre-loader -->
+  <div class="loader-bg">
+    <div class="loader-track">
+      <div class="loader-fill"></div>
+    </div>
+  </div>
+
+  <!-- ÁREA VERMELHA: Sidebar (FIXA) -->
+  <nav class="pc-sidebar">
+    <div class="navbar-wrapper">
+      <div class="m-header">
+        <a href="index.html" class="b-brand text-primary">
+          <img src="../assets/images/logo1.png alt="PDF Facil" class="logo logo-lg" />
+        </a>
+      </div>
+      <div class="navbar-content">
+        <ul class="pc-navbar">
+          
+          <li class="pc-item pc-caption">
+            <label>Dashboard</label>
+            <i class="ti ti-dashboard"></i>
+          </li>
+          <li class="pc-item active">
+            <a href="index.html" class="pc-link">
+              <span class="pc-micon"><i class="ti ti-dashboard"></i></span>
+              <span class="pc-mtext">Início</span>
+            </a>
+          </li>
+
+<li class="pc-item">
+  <a href="estatisticas.html" class="pc-link pdf-tool-link">
+    <span class="pc-micon"><i class="ti ti-chart-bar"></i></span>
+    <span class="pc-mtext">Estatísticas</span>
+  </a>
+</li>
+
+          <li class="pc-item pc-caption">
+            <label>PDF Funcoes</label>
+            <i class="ti ti-file-text"></i>
+          </li>
+          
+          <!-- Links das ferramentas que serão interceptados pelo AJAX -->
+          <li class="pc-item">
+            <a href="comprimir.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-file-minus"></i></span>
+              <span class="pc-mtext">Comprimir</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="converter.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-exchange"></i></span>
+              <span class="pc-mtext">Converter</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="dividir.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-scissors"></i></span>
+              <span class="pc-mtext">Dividir</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="editar.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-pencil"></i></span>
+              <span class="pc-mtext">Editar</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="extrair-paginas.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-file-export"></i></span>
+              <span class="pc-mtext">Extrair Páginas</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="extrair-imagens.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-photo"></i></span>
+              <span class="pc-mtext">Extrair Imagens</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="filtro.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-adjustments"></i></span>
+              <span class="pc-mtext">Filtro</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="juntar.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-files"></i></span>
+              <span class="pc-mtext">Juntar</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="otimizar-pje.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-scale"></i></span>
+              <span class="pc-mtext">Otimizar PJE</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="remover-paginas.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-trash"></i></span>
+              <span class="pc-mtext">Remover Páginas</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="reorganizar.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-sort-ascending"></i></span>
+              <span class="pc-mtext">Reorganizar</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="rotacionar.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-rotate"></i></span>
+              <span class="pc-mtext">Rotacionar</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="ocr.html" class="pc-link pdf-tool-link">
+              <span class="pc-micon"><i class="ti ti-scan"></i></span>
+              <span class="pc-mtext">OCR</span>
+            </a>
+          </li>
+
+          <li class="pc-item pc-caption">
+            <label>Pages</label>
+            <i class="ti ti-news"></i>
+          </li>
+          <!-- Links externos - não interceptados -->
+          <li class="pc-item">
+            <a href="../pages/login-v3.html" target="_blank" class="pc-link">
+              <span class="pc-micon"><i class="ti ti-lock"></i></span>
+              <span class="pc-mtext">Login</span>
+            </a>
+          </li>
+          <li class="pc-item">
+            <a href="../pages/register-v3.html" target="_blank" class="pc-link">
+              <span class="pc-micon"><i class="ti ti-user-plus"></i></span>
+              <span class="pc-mtext">Register</span>
+            </a>
+          </li>
+
+          <li class="pc-item pc-caption">
+            <label>Other</label>
+            <i class="ti ti-brand-chrome"></i>
+          </li>
+          <li class="pc-item pc-hasmenu">
+            <a href="#!" class="pc-link">
+              <span class="pc-micon"><i class="ti ti-menu"></i></span>
+              <span class="pc-mtext">Menu levels</span>
+              <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+            </a>
+            <ul class="pc-submenu">
+              <li class="pc-item"><a class="pc-link" href="#!">Level 2.1</a></li>
+              <li class="pc-item pc-hasmenu">
+                <a href="#!" class="pc-link">Level 2.2<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+                <ul class="pc-submenu">
+                  <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
+                  <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+        
+        <!-- ÁREA AZUL: Card sidebar (FIXA) -->
+        <div class="pc-navbar-card bg-primary rounded">
+          <h4 class="text-white">PDFFácil É Rápido... <span class="text-white fw-bold fs-1 animated swing infinite d-inline-block">0</span> Stress!</h4>
+          <p class="text-white opacity-75">Todas as ferramentas PDF gratuitas</p>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- ÁREA VERDE: Header (FIXA) -->
+  <!-- [ Header Topbar ] start -->
+<header class="pc-header">
+  <div class="header-wrapper">
+    <!-- [Mobile Media Block] start -->
+    <div class="me-auto pc-mob-drp">
+      <ul class="list-unstyled">
+        <!-- Botão Menu Desktop/Tablet -->
+        <li class="pc-h-item header-mobile-collapse">
+          <a href="#" class="pc-head-link head-link-secondary ms-0" id="sidebar-hide">
+            <i class="ti ti-menu-2"></i>
+          </a>
+        </li>
+        <!-- Botão Menu Mobile -->
+        <li class="pc-h-item pc-sidebar-popup">
+          <a href="#" class="pc-head-link head-link-secondary ms-0" id="mobile-collapse">
+            <i class="ti ti-menu-2"></i>
+          </a>
+        </li>
+        <!-- Busca Mobile (Dropdown) -->
+        <li class="dropdown pc-h-item d-inline-flex d-md-none">
+          <a
+            class="pc-head-link head-link-secondary dropdown-toggle arrow-none m-0"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-haspopup="false"
+            aria-expanded="false"
+          >
+            <i class="ti ti-search"></i>
+          </a>
+          <div class="dropdown-menu pc-h-dropdown drp-search">
+            <form class="px-3">
+              <div class="mb-0 d-flex align-items-center">
+                <i class="ti ti-search"></i>
+                <input type="search" class="form-control border-0 shadow-none" placeholder="Buscar ferramenta..." />
+              </div>
+            </form>
+          </div>
+        </li>
+        <!-- Busca Desktop -->
+        <li class="pc-h-item d-none d-md-inline-flex">
+          <form class="header-search">
+            <i class="ti ti-search icon-search"></i>
+            <input type="search" class="form-control" placeholder="Buscar ferramenta..." />
+            <button class="btn btn-light-secondary btn-search"><i class="ti ti-adjustments-horizontal"></i></button>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <!-- [Mobile Media Block end] -->
+    
+    <!-- Área Direita do Header -->
+    <div class="ms-auto">
+      <ul class="list-unstyled">
+        <!-- Notificações -->
+        <li class="dropdown pc-h-item">
+          <a
+            class="pc-head-link head-link-secondary dropdown-toggle arrow-none me-0"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-haspopup="false"
+            aria-expanded="false"
+          >
+            <i class="ti ti-bell"></i>
+          </a>
+          <div class="dropdown-menu dropdown-notification dropdown-menu-end pc-h-dropdown">
+            <div class="dropdown-header">
+              <a href="#!" class="link-primary float-end text-decoration-underline">Marcar como lidas</a>
+              <h5>
+                Notificações
+                <span class="badge bg-warning rounded-pill ms-1">01</span>
+              </h5>
+            </div>
+            <div class="dropdown-header px-0 text-wrap header-notification-scroll position-relative" style="max-height: calc(100vh - 215px)">
+              <div class="list-group list-group-flush w-100">
+                <div class="list-group-item list-group-item-action">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <div class="user-avtar bg-light-success"><i class="ti ti-file-check"></i></div>
+                    </div>
+                    <div class="flex-grow-1 ms-1">
+                      <span class="float-end text-muted">3 min atrás</span>
+                      <h5>PDF Processado</h5>
+                      <p class="text-body fs-6">Seu arquivo foi comprimido com sucesso.</p>
+                      <div class="badge rounded-pill bg-light-danger">Não lida</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item list-group-item-action">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="user-avtar" />
+                    </div>
+                    <div class="flex-grow-1 ms-1">
+                      <span class="float-end text-muted">10 min atrás</span>
+                      <h5>Nova Funcionalidade</h5>
+                      <p class="text-body fs-6">Agora você pode extrair imagens dos seus PDFs!</p>
+                      <div class="badge rounded-pill bg-light-success">Novidade</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="text-center py-2">
+              <a href="#!" class="link-primary">Ver todas</a>
+            </div>
+          </div>
+        </li>
+        <!-- Perfil do Usuário -->
+        <li class="dropdown pc-h-item header-user-profile">
+          <a
+            class="pc-head-link head-link-primary dropdown-toggle arrow-none me-0"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-haspopup="false"
+            aria-expanded="false"
+          >
+            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar" />
+            <span>
+              <i class="ti ti-settings"></i>
+            </span>
+          </a>
+          <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
+            <div class="dropdown-header">
+              <h4>
+                Bom dia,
+                <span class="small text-muted" data-user-name>Usuário</span>
+              </h4>
+              <p class="text-muted" data-user-email>PDF Facil User</p>
+              <hr />
+              <div class="profile-notification-scroll position-relative" style="max-height: calc(100vh - 280px)">
+                <div class="upgradeplan-block bg-light-info rounded">
+                  <h4>PDF Facil</h4>
+                  <p class="text-muted">Ferramentas PDF gratuitas</p>
+                  <a href="https://github.com/sponsors" target="_blank" class="btn btn-info">Doação</a>
+                </div>
+                <hr />
+                <a href="#" class="dropdown-item">
+                  <i class="ti ti-settings"></i>
+                  <span>Configurações da Conta</span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <i class="ti ti-user"></i>
+                  <span>Perfil Social</span>
+                </a>
+                <a href="#" class="dropdown-item" id="logout-button">
+                  <i class="ti ti-logout"></i>
+                  <span>Sair</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+  <!-- ÁREA ROXA: Conteúdo Principal (DINÂMICA) -->
+  <div class="pc-container">
+    <div class="pc-content" id="main-content">
+      
+      <!-- Header de Boas-vindas -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="page-header-title">
+                <h5 class="m-b-10">PDFFácil É Rápido... <span class="text-primary fw-bold fs-1 animated swing infinite d-inline-block">0</span> Stress!</h5>
+              </div>
+            </div>
+            <div class="col-auto">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item">PDF Facil</li>
+                <li class="breadcrumb-item active">Dashboard</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Card de Introdução -->
+<div class="row mb-2">
+  <div class="col-12">
+    <div class="card border-primary">
+      <div class="card-header bg-primary">
+        <h5 class="text-white mb-0">
+          <i class="ti ti-file-text me-2"></i>A maneira mais simples de usar PDFs
+        </h5>
+        <div class="d-flex align-items-start mt-2">
+          <i class="ti ti-arrow-right text-white me-2 mt-1 flex-shrink-0"></i>
+          <p class="text-white opacity-75 mb-0" style="font-style: italic;">
+            Edite, otimize e converta seus documentos em segundos, sem custo e sem complicação.            
+          </p>
+        </div>
+      </div>
+      <div class="card-body">
+        
+        <!-- Como Usar Section -->
+        <div class="d-flex align-items-center mb-3">
+          <i class="ti ti-info-circle me-2"></i>
+          <h5 class="mb-0"> Como Usar - Selecione uma das <strong>20 ferramentas</strong> disponíveis. </h5>
+
+
+
+
+        </div>
+        <hr class="mb-3">
+        
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+          <span class="badge bg-primary py-2 px-4">
+            <i class="ti ti-hand-click me-1"></i>1. Selecione
+          </span>
+          <i class="ti ti-chevron-right text-muted"></i>
+          <span class="badge bg-success py-2 px-4">
+            <i class="ti ti-upload me-1"></i>2. Carregue
+          </span>
+          <i class="ti ti-chevron-right text-muted"></i>
+          <span class="badge bg-warning py-2 px-4">
+            <i class="ti ti-settings me-1"></i>3. Configure
+          </span>
+          <i class="ti ti-chevron-right text-muted"></i>
+          <span class="badge bg-info py-2 px-4">
+            <i class="ti ti-download me-1"></i>4. Baixe
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <!-- Grid de Ferramentas PDF -->
+      <div class="row">
+        
+        <!-- Comprimir PDF -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="comprimir.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-primary">
+                    <i class="ti ti-arrows-minimize fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Comprimir PDF</h6>
+                  <p class="text-muted mb-0 small">Reduza o tamanho</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-primary btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Reduza o tamanho de arquivos PDF grandes mantendo a máxima qualidade.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Converter PDF -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="converter.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-success">
+                    <i class="ti ti-file-export fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Converter PDF</h6>
+                  <p class="text-muted mb-0 small">Múltiplos formatos</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-success btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Converta PDFs para Word, Excel, JPG e outros formatos com alta fidelidade.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Juntar PDF -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="juntar.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-warning">
+                    <i class="ti ti-files fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Juntar PDF</h6>
+                  <p class="text-muted mb-0 small">Combinar arquivos</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-warning btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Combine múltiplos PDFs em um único arquivo, na ordem que você desejar.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Dividir PDF -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="dividir.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-info">
+                    <i class="ti ti-cut fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Dividir PDF</h6>
+                  <p class="text-muted mb-0 small">Separar páginas</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-info btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Extraia páginas específicas de um PDF para criar novos documentos.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Editar PDF -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="editar.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-primary">
+                    <i class="ti ti-edit fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Editar PDF</h6>
+                  <p class="text-muted mb-0 small">Modificar conteúdo</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-primary btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Adicione textos, imagens, formas e anotações diretamente no seu PDF.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Extrair Páginas -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="extrair-paginas.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-primary">
+                    <i class="ti ti-file-export fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Extrair Páginas</h6>
+                  <p class="text-muted mb-0 small">Selecionar específicas</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-primary btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Selecione e extraia exatamente as páginas que você precisa de um PDF.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Extrair Imagens -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="extrair-imagens.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-success">
+                    <i class="ti ti-photo fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Extrair Imagens</h6>
+                  <p class="text-muted mb-0 small">JPG e PNG</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-success btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Salve todas as imagens de um PDF nos formatos JPG ou PNG com um clique.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Filtros PDF -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="filtro.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-warning">
+                    <i class="ti ti-adjustments fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Filtros PDF</h6>
+                  <p class="text-muted mb-0 small">Ajustes visuais</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-warning btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Aplique filtros de cor, contraste e brilho para melhorar seus documentos.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Otimizar PJE -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="otimizar-pje.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-info">
+                    <i class="ti ti-scale fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Otimizar PJE</h6>
+                  <p class="text-muted mb-0 small">Processo Judicial</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-info btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Adeque seus PDFs às normas e exigências do Processo Judicial Eletrônico.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Remover Páginas -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="remover-paginas.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-danger">
+                    <i class="ti ti-trash fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Remover Páginas</h6>
+                  <p class="text-muted mb-0 small">Eliminar desnecessárias</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-danger btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Exclua permanentemente páginas individuais ou múltiplas de um arquivo PDF.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Reorganizar -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="reorganizar.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-success">
+                    <i class="ti ti-sort-ascending fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Reorganizar</h6>
+                  <p class="text-muted mb-0 small">Alterar ordem</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-success btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Altere a ordem das páginas do seu PDF com uma interface de arrastar e soltar.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Rotacionar -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="rotacionar.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-primary">
+                    <i class="ti ti-rotate fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Rotacionar</h6>
+                  <p class="text-muted mb-0 small">Corrigir orientação</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-primary btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Gire uma ou todas as páginas do seu PDF para corrigir a orientação.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- OCR -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="ocr.html" class="card h-100 text-decoration-none card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="flex-shrink-0">
+                  <div class="avtar avtar-md bg-success">
+                    <i class="ti ti-scan fs-4"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h6 class="mb-0 text-dark">Reconhecimento OCR</h6>
+                  <p class="text-muted mb-0 small">Texto pesquisável</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="btn btn-outline-success btn-sm">
+                    <i class="ti ti-arrow-right me-1"></i>Acessar
+                  </span>
+                </div>
+              </div>
+              <p class="text-muted mb-0">Transforme PDFs escaneados e imagens em documentos com texto pesquisável.</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Call to Action -->
+      <div class="row mt-2">
+        <div class="col-12">
+          <div class="card bg-light">
+            <div class="card-body text-center py-4">
+              <h5 class="mb-3"><i class="ti ti-rocket me-2"></i>PDFFácil É Rápido... <span class="text-primary fw-bold fs-1 animated swing infinite d-inline-block">0</span> Stress!</h5>
+              <p class="text-muted mb-3">
+                Escolha uma das ferramentas acima e transforme seus documentos PDF com poucos cliques.
+              </p>
+              <p class="small text-muted mb-0">
+                <i class="ti ti-shield-check me-1"></i>
+                <strong>PDF Facil</strong> - Simplificando sua vida digital desde 2023
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- ÁREA AMARELA: Footer (FIXA) -->
+  <footer class="pc-footer">
+    <div class="footer-wrapper container-fluid">
+      <div class="row">
+        <div class="col-sm-6 my-1">
+          <p class="m-0">© 2025 PDFFacil.com É Rápido... <span class="text-primary fw-bold fs-1 animated swing infinite d-inline-block">0</span> Stress!</p>
+        </div>
+        <div class="col-sm-6 ms-auto my-1">
+          <ul class="list-inline footer-link mb-0 justify-content-sm-end d-flex">
+            <li class="list-inline-item"><a href="index.html">Início</a></li>
+            <li class="list-inline-item"><a href="sobre.html" class="pdf-tool-link">Sobre</a></li>
+            <li class="list-inline-item"><a href="contato.html" class="pdf-tool-link">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== INÍCIO DOS SCRIPTS ==================== -->
+  
+  <!-- CryptoJS - Para sistema de hash de senhas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+  <!-- Berry Scripts originais -->
+  <script src="../assets/js/plugins/popper.min.js"></script>
+  <script src="../assets/js/plugins/simplebar.min.js"></script>
+  <script src="../assets/js/plugins/bootstrap.min.js"></script>
+  <script src="../assets/js/icon/custom-font.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/plugins/feather.min.js"></script>
+  
+  <!-- Sistema de Autenticação -->
+  <script src="../assets/js/auth-system.js"></script>
+
+  <!-- NOSSO SISTEMA AJAX -->
+  <script src="../assets/js/berry-ajax-navigation.js"></script>
+  <script src="../assets/js/pdf-search-simple.js"></script>
+
+  <!-- SISTEMA DE AUTENTICAÇÃO EM BACKGROUND (SEM PROTEÇÃO OBRIGATÓRIA) -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Aguardar sistemas carregarem (sem forçar login)
+    const initAuthSystem = () => {
+      if (typeof AuthSystem !== 'undefined' && typeof CryptoJS !== 'undefined') {
+        
+        console.log('🔐 Sistema de autenticação carregado (modo livre)');
+        
+        // Verificar se usuário está logado (opcional)
+        if (AuthSystem.isAuthenticated()) {
+          const user = AuthSystem.getCurrentUser();
+          if (user) {
+            console.log('✅ Usuário logado:', user.username);
+            
+            // Atualizar nome do usuário discretamente (mantendo "Bom dia,")
+            const userNameSpan = document.querySelector('[data-user-name]');
+            if (userNameSpan) {
+              userNameSpan.textContent = user.username;
+            }
+            
+            // Atualizar email/descrição do usuário
+            const userEmailP = document.querySelector('[data-user-email]');
+            if (userEmailP) {
+              userEmailP.textContent = user.email;
+            }
+            
+            // Configurar botão de logout
+            const logoutButton = document.getElementById('logout-button');
+            if (logoutButton) {
+              logoutButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Realizar logout
+                const result = AuthSystem.logout();
+                if (result.success) {
+                  AuthUI.showToast(result.message, 'success');
+                  
+                  // Aguardar e recarregar página
+                  setTimeout(() => {
+                    window.location.reload();
+                  }, 1000);
+                }
+              });
+            }
+          }
+        } else {
+          console.log('👤 Visitante anônimo - acesso livre');
+          // Manter textos originais para visitantes não logados
+        }
+        
+      } else {
+        // Aguardar sistemas carregarem
+        setTimeout(initAuthSystem, 100);
+      }
+    };
+    
+    // Inicializar sistema
+    initAuthSystem();
+  });
+  </script>
+
+  <!-- Berry theme configs -->
+  <script>
+    layout_change('light');
+    font_change('Roboto');
+    change_box_container('false');
+    layout_caption_change('true');
+    layout_rtl_change('false');
+    preset_change('preset-1');
+  </script>
+
+</body>
+</html>
